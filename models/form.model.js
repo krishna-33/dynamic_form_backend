@@ -40,7 +40,6 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   Froms.associate = function (models) {
-     // associations can be defined here
      Froms.hasMany(models.responses, {
         foreignKey: 'form_id',
      });

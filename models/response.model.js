@@ -34,10 +34,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   Responses.associate = function (models) {
-    // associations can be defined here
     Responses.hasOne(models.users, {
        foreignKey: 'id',
-       //primaryKey: 'id'
     });
  };
 
