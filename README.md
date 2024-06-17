@@ -33,7 +33,7 @@ FE: 6 hours
 BE: 3 hours 30 minutes
 
 # Pending #
-- Deployment on server 
+- Deploy code on server 
 
 # Sample data #
 - I have added seeders for sample data.
