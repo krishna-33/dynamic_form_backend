@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { users: Users } = require("../models");
+const { NO_ACCESS, USER_NOT_FOUND, INVALID_TOKEN } = require("../utils/message");
 
 
 module.exports = async function (req, res, next) {
@@ -8,7 +9,7 @@ module.exports = async function (req, res, next) {
     return res.json({
       status: 500,
       success: false,
-      data: "You are not authorized to access the api",
+      data: NO_ACCESS,
     });
   } else {
     const decodeTooken = jwt.decode(token, process.env.JWT_SECRET_KEY);
@@ -23,7 +24,7 @@ module.exports = async function (req, res, next) {
         return res.json({
           status: 401,
           success: false,
-          data: "user not found",
+          data: USER_NOT_FOUND,
         });
       }
       else{
@@ -34,7 +35,7 @@ module.exports = async function (req, res, next) {
         return res.json({
             status: 401,
             success: false,
-            data: "Invalid token",
+            data: INVALID_TOKEN,
           });
     }
   }

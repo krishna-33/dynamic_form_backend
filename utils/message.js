@@ -12,5 +12,7 @@ module.exports = {
     USER_ALREADY_REGISTERED: "Email address is already used.",
     USER_SIGNUP: 'User registered successfully',
     RESPONSE_SAVED_ALREADY: 'Response is already saved',
-    WRONG_PASSWORD: 'Wrong Password'
+    WRONG_PASSWORD: 'Wrong Password',
+    NO_ACCESS: "You are not authorized to access the api",
+    INVALID_TOKEN: "Invalid token"
 }
